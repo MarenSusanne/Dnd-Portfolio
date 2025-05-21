@@ -1,52 +1,67 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-yellow-100 to-amber-200 flex flex-col items-center justify-center text-center p-8">
-    <h1 class="text-3xl font-bold mb-4">
-      Kartet er nesten klart... bare ikke helt ennå
-    </h1>
-
-    <!-- Progressbar -->
-    <div class="w-full max-w-md mt-6">
-      <p class="text-yellow-800 text-sm mb-1">🗺️ Kartdata lastes inn... {{ progress }}%</p>
-    <div style="width: 100%; height: 10px; background: #585858; border: 1px solid #000; border-radius: 9999px; overflow: hidden;">
-      <div
-        :style="{ width: progress + '%', height: '100%', background: '#008DA9', borderRadius: '9999px' }"
-      ></div>
+   <div class="full-screen-landing">
+    <div
+    :class="[
+      'w-screen h-screen flex flex-col items-center justify-center text-center transition-transform duration-1000 bg-cover bg-center',
+      { 'fly-away': isLeaving }
+    ]"
+    :style="{ backgroundImage: `url(${curtainUrl})`}"
+  >
+      <h1 class="text-4xl font-serif font-bold">
+        Velkommen til Marens verden
+      </h1>
+      <p class="text-lg">
+        En levende portefølje. Trykk for å avsløre innholdet under.
+      </p>
+      <button
+        @click="reveal"
+        class="hover:bg-yellow-800 font-bold rounded-2xl transition duration-300"
+      >
+        🎭 Enter
+      </button>
     </div>
-    </div>
-
-    <!-- Knapp (valgfri å vise nå) -->
-    <!--
-    <router-link
-      to="/character"
-      class="mt-10 bg-yellow-700 hover:bg-yellow-800 text-white font-bold py-3 px-6 rounded-2xl shadow-lg transition duration-300"
-    >
-      🧙‍♀️ Gå videre til karakterarket
-    </router-link>
-    -->
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
-const progress = ref(0)
+const isLeaving = ref(false)
+const router = useRouter()
+const curtainUrl = `${import.meta.env.BASE_URL}curtain.png`
 
-onMounted(() => {
-  console.log('🧪 Progressbar startet')
-
-  const interval = setInterval(() => {
-    if (progress.value < 99) {
-      progress.value += 1
-    } else {
-      console.log('🔁 Reset progress to 0%')
-      progress.value = 0
-    }
-
-    console.log(`📊 Progress: ${progress.value}%`)
-  }, 100) // juster farten her
-})
+function reveal() {
+  isLeaving.value = true
+  setTimeout(() => {
+    router.push('/character')
+  }, 1000) // matcher CSS duration
+}
 </script>
 
 <style scoped>
-/* Her kan du legge til bakgrunnselementer, bilder, stjerner osv. */
+.full-screen-landing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  transform: translateY(0);
+  transition: transform 1s ease;
+  filter: grayscale(100%);
+}
+
+.fly-away {
+  transform: translateY(-100vh);
+  transition: transform 1s ease;
+}
 </style>
