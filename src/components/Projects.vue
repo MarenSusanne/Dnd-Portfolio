@@ -58,7 +58,7 @@
 interface Project {
   title: string
   description: string
-  technologies: string[]
+  technologies?: string[]
   repo?: string
   pages?: string
   website?: string
@@ -71,29 +71,29 @@ function cleanUrl(url: string): string {
 const projects: Project[] = [
   {
     title: 'Kunst Tavla',
-    description: 'Et lite frontend-prosjekt som bruker Vue 3 og gir oversikt over magiske bøker.',
-    technologies: ['Vue 3', 'TypeScript', 'Tailwind'],
+    description: 'Første "store" gruppe prosjektet da jeg startet på GET Academy. Ganske stilig kunst visnings side, men koden ville vært mye annerledes i dag. Kanskje jeg skulle prøve å lage den på nytt?',
+    
     repo: 'https://github.com/MarenSusanne/Kunst-Tavla',
     pages: 'https://marensusanne.github.io/Kunst-Tavla/'
   },
   {
     title: 'Wünderbite',
-    description: 'Et interaktivt kart som lar brukeren utforske ulike deler av porteføljen.',
-    technologies: ['SVG', 'Vue Router', 'CSS animasjoner'],
+    description: 'Et interaktiv Halloween prosjekt, skal bli til et "online escape room" for mine venner. Planlagt videre arbeid i sommer.',
+    
     repo: 'https://github.com/MarenSusanne/Wunderbite',
     website: 'https://wunderbite.org'
   },
   {
     title: 'DnD Monster Searcher',
-    description: 'En visuell todo-liste presentert som et oppdragstavle fra et eventyrspill.',
-    technologies: ['Pinia', 'Vue', 'LocalStorage'],
+    description: 'Øving på api henting via Dungeons and Dragons Monster liste. Kanskje litt mer backend, men helt fornøyd med resultatet.',
+    
     repo: 'https://github.com/MarenSusanne/dnd-monster-searcher',
     pages: 'https://marensusanne.github.io/dnd-monster-searcher/'
   },
   {
     title: 'Stemmegivning',
-    description: 'En visuell todo-liste presentert som et oppdragstavle fra et eventyrspill.',
-    technologies: ['Pinia', 'Vue', 'LocalStorage'],
+    description: 'Modified Porsgrunn ønsker en bedre måte å ta imot stemmer til Publikums Valg. Dette er kun et simpelt forslag og jeg skal sammarbeide med dem om en side til deres show i 2026.',
+    
     repo: 'https://github.com/MarenSusanne/bilshow-voting',
     website: 'https://bilshow-voting.vercel.app'
   },
