@@ -2,7 +2,7 @@
    <div class="full-screen-landing">
     <div
     :class="[
-      'w-screen h-screen flex flex-col items-center justify-center text-center transition-transform duration-1000 bg-cover bg-center',
+      'curtain w-screen h-screen flex flex-col items-center justify-center text-center transition-transform duration-1000 bg-cover bg-center',
       { 'fly-away': isLeaving }
     ]"
     :style="{ backgroundImage: `url(${curtainUrl})`}"
@@ -17,7 +17,7 @@
         @click="reveal"
         class="hover:bg-yellow-800 font-bold rounded-2xl transition duration-300"
       >
-        🎭 Enter
+        Enter
       </button>
     </div>
   </div>
@@ -34,7 +34,7 @@ const curtainUrl = `${import.meta.env.BASE_URL}curtain.png`
 function reveal() {
   isLeaving.value = true
   setTimeout(() => {
-    router.push('/character')
+    router.push('/map')
   }, 1000) // matcher CSS duration
 }
 </script>
@@ -57,6 +57,10 @@ function reveal() {
   z-index: 50;
   transform: translateY(0);
   transition: transform 1s ease;
+
+}
+
+.curtain{
   filter: grayscale(100%);
 }
 
