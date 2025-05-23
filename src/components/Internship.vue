@@ -8,7 +8,7 @@
       </p>
 
       <p class="mb-4">
-        Utdanningen min har fokus på moderne teknologier som <strong>Vue 3, TypeScript, Tailwind, Git og Agile utviklingsmetoder</strong>. Jeg har også jobbet med prosjekter der jeg selv har designet og kodet nettsider fra bunnen.
+        Utdanningen min har fokus på moderne teknologier som <strong>JS, TS, HTML, CSS, Vue, React, C# og SQL</strong>. Jeg har også jobbet med prosjekter der jeg selv har designet og kodet nettsider fra bunnen.
       </p>
 
       <p class="mb-4">
@@ -20,10 +20,17 @@
       </p>
 
       <div class="mt-6">
-        <h2 class="text-xl font-bold mb-2">📬 Kontaktinformasjon</h2>
+        <h2 class="text-xl font-bold mb-2">📬 Min Kontaktinformasjon</h2>
         <p>E-post: <a href="mailto:marentve@online.no" class="underline text-blue-800">Marentve@online.no</a></p>
+        <p>E-post: <a href="tel:+4794134641" class="underline text-blue-800">941 34 641</a></p>
         <p>GitHub: <a href="https://github.com/MarenSusanne" class="underline text-blue-800" target="_blank">github.com/MarenSusanne</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/maren-susanne-tveit-70a7b12bb/" class="underline text-blue-800" target="_blank">linkedin.com/in/MarenSusanne</a></p>
+      </div>
+      <div class="mt-6">
+        <h2 class="text-xl font-bold mb-2">📚 Ta kontakt om IT-rekruttering</h2>
+        <h2 class="text-l font-bold mb-2">Eskil Domben - Co-Founder GET Academy</h2>
+        <p>E-post: <a href="mailto:eskil@getacademy.no" class="underline text-blue-800">Eskil@GetAcademy.no</a></p>
+        <p>E-post: <a href="tel:+4745485922" class="underline text-blue-800">454 85 922</a></p>
       </div>
     </div>
   </div>
