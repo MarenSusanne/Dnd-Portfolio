@@ -48,9 +48,6 @@
       <h2 class="text-xl font-bold text-yellow-900 mb-2">Lore</h2>
       <p class="text-yellow-900 leading-relaxed">{{ character.lore }}</p>
     </div>
-    <div class="bg-yellow-200 p-4 rounded-xl shadow-inner">
-      <h2 class="text-xl font-bold text-yellow-900 mb-2">Lenker</h2>
-    </div>
   </div>
     
 
