@@ -97,6 +97,12 @@ const projects: Project[] = [
     repo: 'https://github.com/MarenSusanne/bilshow-voting',
     website: 'https://bilshow-voting.vercel.app'
   },
+  {
+    title: 'Pokemon App',
+    description: 'Pokemon inspirert battle spill, veldig uferdig, men en god visning av design synes jeg', 
+    repo: 'https://github.com/MarenSusanne/PokemonBattle',
+    pages: 'https://marensusanne.github.io/PokemonBattle/'
+  },
 ]
 </script>
 
